@@ -1,0 +1,47 @@
+.marqueeText {
+    padding: 20px 0;
+    background: #000000;
+}
+
+.marqueeText .scroller {
+    display: flex;
+    gap: 50px;
+    width: max-content;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marqueeText .scroller p {
+    color: #FFFFFF;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+}
+
+.marqueeText .scroller p:after {
+    position: absolute;
+    right: -30px;
+    top: 8px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+}
+
+.marqueeText .scroller p:nth-child(odd) {
+    color: transparent;
+    -webkit-text-stroke: 1px #FFFFFF;
+}

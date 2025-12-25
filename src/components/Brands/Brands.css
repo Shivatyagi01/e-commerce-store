@@ -1,0 +1,9 @@
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 100px;
+}
